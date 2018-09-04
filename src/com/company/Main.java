@@ -10,17 +10,22 @@ class Movie {
     public String plot() {
         return "No plot here";
     }
+
+    public String getName() {
+        return name;
+    }
 }
 
 class Jaws extends Movie {
     public Jaws() {
         super("Jaws");
     }
-}
 
     public String plot() {
         return "A shark eats lots of people";
     }
+}
+
 
 class IndependenceDay extends Movie {
     public IndependenceDay() {
@@ -65,12 +70,15 @@ class Forgetable extends Movie {
 public class Main {
 
     public static void main(String[] args) {
-
+        for (int i = 1; i < 11; i++) {
+            Movie movie = randomMovie();
+            System.out.println("Mobie # " + i + ": " + movie.getName() + "\n" + "Plot " + movie.plot() + "\n");
+        }
     }
 
     public static Movie randomMovie() {
         int ranromNumber = (int) (Math.random() * 5) + 1;
-        System.out.println("Random number generated was" + ranromNumber);
+        System.out.println("Random number generated was " + ranromNumber);
         switch (ranromNumber) {
             case 1:
                 return new Jaws();
