@@ -47,6 +47,17 @@ class Jaws extends Movie {
         public StarWars() {
             super("Star Wars");
         }
+
+        @Override
+        public String plot() {
+            return "Imperial Forces take to over the universe";
+        }
+    }
+
+    class Forgetable extends Movie {
+        public Forgetable() {
+            super("Forgetable");
+        }
     }
 }
 
